@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "122840321154",
+    "project_id": "bolavarework",
+    "storage_bucket": "bolavarework.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:122840321154:android:90fb6ef794a32c6390f89b",
+        "android_client_info": {
+          "package_name": "com.example.bolavarework"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "122840321154-95rfrvs64vheoinhsvpb9o1n4u2bfini.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBHJGX8x1bnJcmun0nBQdhxljdwDxKD0KY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "122840321154-95rfrvs64vheoinhsvpb9o1n4u2bfini.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

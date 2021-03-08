@@ -1,0 +1,2 @@
+rootProject.name = "BolavaRework"
+include ':app'
