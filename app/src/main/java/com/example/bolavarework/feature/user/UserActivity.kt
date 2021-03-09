@@ -43,13 +43,9 @@ class UserActivity(): AppCompatActivity() {
     lateinit var header: NavigationHeaderBinding
 
     private var mapFragment: MapFragment = get()
-
     private var settingsFragment: SettingsFragment = get()
-
     private var historyFragment: HistoryFragment = get()
-
     private val dialogs: Dialogs = get(parameters = { parametersOf(this) })
-
     private var perms: Permissions = get(parameters = { parametersOf(this) })
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -59,13 +55,7 @@ class UserActivity(): AppCompatActivity() {
 
         setupToolbar()
         setupFragment()
-        firebaseDatabase.child("Me").setValue("hello").addOnCompleteListener {
-            if (it.isSuccessful) {
-                Log.d("FIREBASE1", "SUCCESS")
-            } else {
-                Log.d("FIREBASE1", "FAILURE")
-            }
-        }
+        viewmodel.createUserCase()
 
         perms.checkPermissions()
         header = NavigationHeaderBinding.inflate(layoutInflater)
