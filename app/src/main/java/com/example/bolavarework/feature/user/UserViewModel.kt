@@ -45,4 +45,8 @@ class UserViewModel(
             }
         })
     }
+
+    fun pushToUsersHistory() {
+        firebaseDatabase.child("users").child(curUser?.uid.toString()).child("history").push().setValue("Test")
+    }
 }
