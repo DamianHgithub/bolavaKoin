@@ -56,7 +56,7 @@ class UserActivity(): AppCompatActivity() {
         setupToolbar()
         setupFragment()
         viewmodel.createUserCase()
-        viewmodel.pushToUsersHistory()
+        viewmodel.setHistoryData()
 
         perms.checkPermissions()
         header = NavigationHeaderBinding.inflate(layoutInflater)

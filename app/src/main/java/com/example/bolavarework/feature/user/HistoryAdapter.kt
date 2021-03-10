@@ -4,12 +4,13 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
+import com.example.bolavarework.data.History
 import com.example.bolavarework.util.DiffCallback
 import com.example.bolavarework.databinding.HistoryItemBinding
 
 class HistoryAdapter: RecyclerView.Adapter<HistoryAdapter.ViewHolder>() {
 
-    private val data = mutableListOf<String>()
+    private val data = mutableListOf<History>()
     inner class ViewHolder(val binding: HistoryItemBinding): RecyclerView.ViewHolder(binding.root)
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): HistoryAdapter.ViewHolder {
@@ -18,14 +19,14 @@ class HistoryAdapter: RecyclerView.Adapter<HistoryAdapter.ViewHolder>() {
     }
 
     override fun onBindViewHolder(holder: HistoryAdapter.ViewHolder, position: Int) {
-        holder.binding.textTitle.text = "test"
+        holder.binding.textTitle.text = data[position].id
     }
 
     override fun getItemCount(): Int {
         return data.size
     }
 
-    fun submitData(newList: List<String>) {
+    fun submitData(newList: List<History>) {
         val diff = DiffUtil.calculateDiff(DiffCallback(data, newList))
         data.apply {
             clear()
