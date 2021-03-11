@@ -64,4 +64,8 @@ class UserViewModel(
 
         })
     }
+
+    fun findRide() {
+
+    }
 }
